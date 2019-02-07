@@ -1,0 +1,56 @@
+<div class="row justify-content-center chart-block">
+  <div class="col-6">
+    <div class="card text-center user-card">
+      <div class="card-header">
+        Transactions Overview
+      </div>
+      <div class="card-body text-left">
+        <div id="pie-chart"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card text-center user-card">
+      <div class="card-header">
+        Transactions Numbers
+      </div>
+      <div class="card-body text-left">
+        <div id="bar-chart"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center txn-block">
+  <div class="col-12">
+    <div class="card text-center user-card">
+      <div class="card-header">
+        Transaction History for UserId: {{ userId }}
+      </div>
+      <div class="card-body text-left">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Type</th>
+              <th scope="col">To</th>
+              <th scope="col">From</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Timestamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let txn of txns; let i = index">
+              <th scope="row">{{ i+1 }}</th>
+              <td>{{ txn.type }}</td>
+              <td>{{ txn.to }}</td>
+              <td>{{ txn.from }}</td>
+              <td>{{ txn.amount }}</td>
+              <td>{{ txn.date }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

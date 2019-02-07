@@ -1,0 +1,20 @@
+{
+  "name": "bank-app-server",
+  "version": "1.0.0",
+  "description": "Bank server apis to make transactions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "author": "Akshay Arora",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.5",
+    "ejs": "^2.5.2",
+    "express": "^4.13.4",
+    "mocha": "^5.2.0",
+    "mongodb": "^3.1.13"
+  }
+}
